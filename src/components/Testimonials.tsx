@@ -26,26 +26,26 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Success Stories</h2>
-          <p className="text-slate-600">Join thousands of happy roommates living their best semester.</p>
+          <p className="text-slate-600">Join happy roommates living their best semester.</p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
           <TestimonialCard 
-            name="Jordan Lee" 
-            school="NYU '25" 
-            quote="I was terrified of random assignment. UniNest matched me with someone who also studies late and loves jazz. Best year ever." 
+            name="Jacob Ade" 
+            school="Uniosun '25" 
+            quote="I was terrified of random assignment. RoomieFind matched me with someone who also studies late and loves jazz. Best year ever." 
             i={1}
           />
           <TestimonialCard 
-            name="Sarah Chen" 
-            school="UCLA '24" 
+            name="Cherish Emanuel" 
+            school="Uniosun '24" 
             quote="The verified student badge gave me so much peace of mind. The UI is super clean and easy to use." 
             i={2}
           />
           <TestimonialCard 
-            name="Mike Ross" 
-            school="Harvard Law" 
-            quote="Found an apartment and a roommate in under 3 days. Highly recommend for anyone moving to a new city." 
+            name="John Akindele" 
+            school="Uniosun" 
+            quote="Found a roommate in under 3 days. Highly recommend for anyone looking for roommates." 
             i={3}
           />
         </div>

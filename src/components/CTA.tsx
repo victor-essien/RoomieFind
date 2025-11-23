@@ -12,9 +12,8 @@ const CTA = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Ready to find your vibe?</h2>
             <p className="text-indigo-100 text-lg mb-10">Sign up today and start browsing profiles near your campus for free. No credit card required.</p>
             <button className="px-10 py-4 bg-white text-indigo-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
-              Download App
+              Get Started
             </button>
-            <p className="mt-6 text-sm text-indigo-200 opacity-80">Available on iOS & Android</p>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const HowItWorks = () => {
     {
       num: "03",
       title: "Chat & Move In",
-      desc: "Break the ice, view listings together, and sign the lease!"
+      desc: "Break the ice, conclude, and move in!"
     }
   ];
 

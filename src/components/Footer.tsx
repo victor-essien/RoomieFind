@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
              <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">U</div>
-                <span className="text-xl font-bold text-slate-900">UniNest</span>
+                <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">RF</div>
+                <span className="text-xl font-bold text-slate-900">RoomieFind</span>
              </div>
              <p className="text-slate-500 max-w-xs leading-relaxed">
                Making student living simpler, safer, and more social. Built by students, for students.
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-100 text-sm text-slate-400">
-          <p>&copy; 2024 UniNest Inc. All rights reserved.</p>
+          <p>&copy; 2025 RoomieFind Inc. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-indigo-600">Twitter</a>
             <a href="#" className="hover:text-indigo-600">Instagram</a>

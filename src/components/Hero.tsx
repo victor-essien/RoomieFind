@@ -28,7 +28,7 @@ const Hero = () => {
               </h1>
               {/* Connect with compatible roommates who match your lifestyle, budget, and preferences. Say goodbye to awkward living situations. */}
               <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Stop relying on random Facebook groups. UniNest matches you with roommates based on lifestyle, major, and vibe. 100% verified students.
+                Connect with compatible roommates who match your lifestyle, budget, and preferences. Say goodbye to awkward living situations.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -36,7 +36,7 @@ const Hero = () => {
                   Find a Roommate <ArrowRight size={18} />
                 </button>
                 <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-semibold hover:bg-slate-50 transition-all">
-                  List a Room
+                  Get Started
                 </button>
               </div>
 
@@ -46,7 +46,7 @@ const Hero = () => {
                     <div key={i} className={`w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-400 overflow-hidden bg-cover`} style={{backgroundImage: `url(https://api.dicebear.com/7.x/avataaars/svg?seed=${i*123})`}}></div>
                   ))}
                 </div>
-                <p>Trusted by 10,000+ students</p>
+                <p>Trusted by students</p>
               </div>
             </motion.div>
           </div>
@@ -65,11 +65,11 @@ const Hero = () => {
                   <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Alex Rivera</h3>
-                  <p className="text-sm text-slate-500">Computer Science • Junior</p>
+                  <h3 className="text-lg font-bold text-slate-900">Alex Ade</h3>
+                  <p className="text-sm text-slate-500">Computer Science • 100lv</p>
                   <div className="flex gap-2 mt-2">
                     <span className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded-md font-medium">Early Bird</span>
-                    <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium">Non-Smoker</span>
+                    <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium">Study freak</span>
                   </div>
                 </div>
               </div>

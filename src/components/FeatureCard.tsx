@@ -34,7 +34,7 @@ const FeatureCard = () => {
           Verified Students Only
         </h3>
         <p className="text-slate-600 leading-relaxed">
-          No bots, no scams. We require .edu email verification so you know
+         We require phone and email verification so you know
           exactly who you're talking to.
         </p>
       </motion.div>
