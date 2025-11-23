@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,9 +27,11 @@ const Navbar = () => {
           <a href="#features" className="hover:text-indigo-600 transition-colors">Features</a>
           <a href="#how-it-works" className="hover:text-indigo-600 transition-colors">How it Works</a>
           <a href="#stories" className="hover:text-indigo-600 transition-colors">Stories</a>
+          <Link to={'/signup'}>
           <button className="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all hover:shadow-lg hover:scale-105 active:scale-95">
             Get Started
           </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -51,7 +53,7 @@ const Navbar = () => {
               <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
               <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>How it Works</a>
               <a href="#stories" onClick={() => setMobileMenuOpen(false)}>Stories</a>
-              <button className="w-full py-3 bg-indigo-600 text-white rounded-xl">Get Started</button>
+             <Link to={'/signup'}> <button className="w-full py-3 bg-indigo-600 text-white rounded-xl">Get Started</button></Link>
             </div>
           </motion.div>
         )}

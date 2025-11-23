@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Coffee, X, Heart } from "lucide-react";
-
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -32,12 +32,16 @@ const Hero = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Link to={'/signup'}>
                 <button className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-2xl font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 hover:shadow-indigo-500/40 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
                   Find a Roommate <ArrowRight size={18} />
                 </button>
+                </Link>
+                <Link to={'/signup'}>
                 <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-semibold hover:bg-slate-50 transition-all">
                   Get Started
                 </button>
+                </Link>
               </div>
 
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
