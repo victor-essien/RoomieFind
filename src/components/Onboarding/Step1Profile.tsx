@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Camera, GraduationCap } from "lucide-react";
+import { ArrowRight, Camera, GraduationCap, MapPin } from "lucide-react";
 
 
 interface Step1ProfileProps {
@@ -19,8 +19,10 @@ interface Step1ProfileProps {
     updateData({ photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" });
   };
 
-  const academicLevels = ["100lvl", "200lvl", "300lvl", "400lvl", "500lvl", "Postgrad"];
+const academicLevels = ["100lvl", "200lvl", "300lvl", "400lvl", "500lvl", "Postgrad"];
+  const campuses = ["Osogbo", "Ikire", "Okuku", "Ejigbo"];
 
+  const isValid = data.gender && data.bio && data.course && data.level && data.university && data.campus;
   return (
     <motion.div 
       initial={{ opacity: 0, x: 20 }}
@@ -51,6 +53,34 @@ interface Step1ProfileProps {
       </div>
         <p className="text-slate-400">Your profile photo stays private. Only users you match or chat with can see it.</p>
 
+            {/* University & Campus Row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-2">
+          <label className="text-xs font-bold uppercase text-slate-400">University</label>
+          <select 
+            value={data.university}
+            onChange={(e) => updateData({ university: e.target.value })}
+            className="w-full p-3 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium focus:ring-2 focus:ring-indigo-500 focus:outline-none appearance-none"
+          >
+            <option value="Uniosun">Uniosun</option>
+          </select>
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-bold uppercase text-slate-400">Campus</label>
+          <div className="relative">
+            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+            <select 
+                value={data.campus}
+                onChange={(e) => updateData({ campus: e.target.value })}
+                className="w-full pl-9 pr-3 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium focus:ring-2 focus:ring-indigo-500 focus:outline-none appearance-none"
+            >
+                <option value="">Select Campus</option>
+                {campuses.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Gender */}
         <div className="space-y-2">
