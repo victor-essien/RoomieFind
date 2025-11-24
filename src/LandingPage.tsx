@@ -1,14 +1,12 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Testimonials from "./components/Testimonials";
-import HowItWorks from "./components/HowItWorks";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+import Navbar from "./components/Landing/Navbar";
+import Hero from "./components/Landing/Hero";
+import Features from "./components/Landing/Features";
+import Testimonials from "./components/Landing/Testimonials";
+import HowItWorks from "./components/Landing/HowItWorks";
+import CTA from "./components/Landing/CTA";
+import Footer from "./components/Landing/Footer";
 
-
-
- const LandingPage = () => {
+const LandingPage = () => {
   return (
     <div className="font-sans text-slate-900 bg-white selection:bg-indigo-100 selection:text-indigo-700">
       <Navbar />
@@ -22,6 +20,6 @@ import Footer from "./components/Footer";
       <Footer />
     </div>
   );
-}
+};
 
-export default LandingPage
+export default LandingPage;

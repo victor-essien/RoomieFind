@@ -74,7 +74,7 @@ export const signupUser = createAsyncThunk(
 
     // Persist logged in user
     localStorage.setItem(USER_KEY, JSON.stringify(newUser));
-
+    console.log('YUUUUUUUUUUUUUUUUUUUU')
     return {
       message: "Signup successful",
       user: newUser

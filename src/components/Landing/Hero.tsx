@@ -69,7 +69,7 @@ const Hero = () => {
                   <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">Alex Ade</h3>
+                  <h3 className="text-lg font-bold text-slate-900">Precious Ade</h3>
                   <p className="text-sm text-slate-500">Computer Science • 100lv</p>
                   <div className="flex gap-2 mt-2">
                     <span className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded-md font-medium">Early Bird</span>
