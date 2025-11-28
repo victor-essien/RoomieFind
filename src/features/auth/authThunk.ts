@@ -17,8 +17,13 @@ interface UpdatePayload {
   bio?: string;
   profilePhoto?: string;
   course_study?: string;
-  academic_level?:string;
-  habits?: [];
+  academic_level?: string;
+  habits?: {
+    sleep?: string[];
+    study?: string[];
+    household?: string[];
+    social?: string[];
+  };
   actively_searching: boolean;
 }
 
@@ -50,23 +55,33 @@ export const signupUser = createAsyncThunk(
     const users = loadUsers();
 
     // Check if email already exists
-    const exists = users.find(u => u.email === email);
-    if (exists) {
-      return rejectWithValue("Email already exists");
-    }
-
+    const exists = users.find((u) => u.email === email);
     // Create user
     const newUser: User & { password: string } = {
       id: generateId(),
       name,
       email,
       password,
-      profilePhoto: "",
+      photo: "",
       bio: "",
+      university: "Uniosun",
       academic_level: "",
-      habits: [],
-      course_study:"",
-      actively_searching: true
+      gender: "",
+      roomDetails: {
+        price: 0,
+        location: "",
+        description: "",
+      },
+      budget: 0,
+      habits: {
+        sleep: [] as string[],
+        study: [] as string[],
+        household: [] as string[],
+        social: [] as string[],
+      },
+      roomStatus: "looking_for_roommate",
+      campus: "",
+      course_study: "",
     };
 
     users.push(newUser);
@@ -74,10 +89,10 @@ export const signupUser = createAsyncThunk(
 
     // Persist logged in user
     localStorage.setItem(USER_KEY, JSON.stringify(newUser));
-    console.log('YUUUUUUUUUUUUUUUUUUUU')
+    console.log("YUUUUUUUUUUUUUUUUUUUU");
     return {
       message: "Signup successful",
-      user: newUser
+      user: newUser,
     };
   }
 );
@@ -90,7 +105,9 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }: LoginPayload, { rejectWithValue }) => {
     const users = loadUsers();
 
-    const user = users.find(u => u.email === email && u.password === password);
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
 
     if (!user) return rejectWithValue("Invalid email or password");
 
@@ -98,7 +115,7 @@ export const loginUser = createAsyncThunk(
 
     return {
       message: "Login successful",
-      user
+      user,
     };
   }
 );
@@ -119,18 +136,20 @@ export const updateProfile = createAsyncThunk(
     // Update fields
     const updatedUser = {
       ...loggedUser,
-      ...payload
+      ...payload,
     };
 
     // Update DB list
-    const updatedUsers = users.map(u => (u.id === loggedUser.id ? updatedUser : u));
+    const updatedUsers = users.map((u) =>
+      u.id === loggedUser.id ? updatedUser : u
+    );
 
     saveUsers(updatedUsers);
     localStorage.setItem(USER_KEY, JSON.stringify(updatedUser));
 
     return {
       message: "Profile updated",
-      user: updatedUser
+      user: updatedUser,
     };
   }
 );

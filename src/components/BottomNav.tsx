@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const BottomNav = () => {
   return (
-    <div className="absolute bottom-0 w-full bg-white border-t border-slate-100 flex justify-around py-3 px-2 z-30 safe-area-pb">
+    <div className=" bottom-0 w-full bg-white border-t border-slate-100 flex justify-around py-3 px-2 z-30 safe-area-pb">
       <NavLink
         to="/discover"
         className={({ isActive }) =>
